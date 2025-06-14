@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -53,42 +54,44 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* IMPROVED, SOFTER EYE-PLEASING DARK THEME */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 222 33% 12%;
+    --foreground: 212 28% 85%;
+    --card: 224 28% 15%;
+    --card-foreground: 210 25% 96%;
+    --popover: 222 34% 10%;
+    --popover-foreground: 210 25% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --primary: 220 95% 63%;                   /* soft vivid blue */
+    --primary-foreground: 223 50% 12%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --secondary: 215 13% 21%;                 /* very muted deep gray */
+    --secondary-foreground: 220 20% 88%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --muted: 215 14% 19%;                     /* slightly bluer muted */
+    --muted-foreground: 215 20% 69%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --accent: 200 89% 72%;                    /* soothing sky blue accent */
+    --accent-foreground: 223 33% 20%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 352 81% 63%;               /* soft red for errors */
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 222 20% 20%;                    /* soft border, not harsh */
+    --input: 222 20% 20%;
+    --ring: 220 55% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 16% 14%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 220 70% 42%;
+    --sidebar-primary-foreground: 210 40% 95%;
+    --sidebar-accent: 222 20% 18%;
+    --sidebar-accent-foreground: 220 40% 95%;
+    --sidebar-border: 224 15% 20%;
+    --sidebar-ring: 220 75% 60%;
   }
 }
 
@@ -100,4 +103,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Set dark mode by default */
+html, body {
+  color-scheme: dark;
+}
+body {
+  @apply dark;
 }
