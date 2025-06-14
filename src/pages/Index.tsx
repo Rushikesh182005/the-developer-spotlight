@@ -71,7 +71,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-30 bg-background/80 backdrop-blur border-b border-border">
       <nav className="container flex mx-auto px-6 py-2 items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">Your Name</a>
+        <a href="#" className="text-xl font-bold tracking-tight hover:text-primary transition-colors">Rushikesh Chippa</a>
         <div className="flex gap-6 items-center">
           <ul className="hidden md:flex gap-4">
             {NAVIGATION.map((nav) => (
@@ -115,7 +115,7 @@ function Hero() {
         loading="lazy"
       />
       <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-primary mb-2 text-center leading-tight">
-        Hi, I'm Your Name 👋
+        Hi, I'm Rushikesh Chippa 👋
       </h1>
       <h2 className="text-2xl font-medium text-muted-foreground mb-4 text-center">
         Software Engineer &amp; Web Developer
@@ -195,7 +195,7 @@ const Index = () => {
       </main>
       <footer className="text-muted-foreground py-10 text-center text-sm">
         <span>
-          &copy; {new Date().getFullYear()} Your Name &mdash; Coded with <span className="text-red-500">♥</span>
+          &copy; {new Date().getFullYear()} Rushikesh Chippa &mdash; Coded with <span className="text-red-500">♥</span>
         </span>
       </footer>
     </div>
