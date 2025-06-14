@@ -1,5 +1,5 @@
-
 import { Github, Linkedin, Mail, ExternalLink, Terminal, Code2, Star, Shield } from "lucide-react";
+import HighlightsSection from "@/components/HighlightsSection";
 
 const NAVIGATION = [
   { label: "About", href: "#about" },
@@ -147,47 +147,6 @@ function About() {
   );
 }
 
-function Projects() {
-  return (
-    <section id="projects" className="container py-16 animate-fade-in">
-      <h3 className="text-3xl font-bold mb-8 text-primary">Projects</h3>
-      <div className="grid md:grid-cols-3 gap-8">
-        {PROJECTS.map((project) => (
-          <div
-            key={project.name}
-            className="group rounded-2xl bg-card border border-border shadow-lg flex flex-col transition-transform hover:-translate-y-2 hover:shadow-2xl hover:border-primary p-6"
-          >
-            <div className="flex items-center gap-2 mb-4">
-              <project.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-              <span className="text-xl font-semibold">{project.name}</span>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-auto text-muted-foreground hover:text-primary transition"
-                aria-label={`Open project ${project.name}`}
-              >
-                <ExternalLink className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="text-muted-foreground mb-4 flex-1">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="text-xs bg-accent/60 text-foreground px-3 py-1 rounded-full font-semibold"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function Skills() {
   return (
     <section id="skills" className="container py-16 animate-fade-in">
@@ -230,7 +189,7 @@ const Index = () => {
       <main>
         <Hero />
         <About />
-        <Projects />
+        <HighlightsSection />
         <Skills />
         <Contact />
       </main>
